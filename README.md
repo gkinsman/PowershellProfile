@@ -25,8 +25,9 @@ Reverses the `Enable-Optimisations` operation by deleting the ini files created 
 
 Opens the given file in sublime text. Excluding the filename parameter just opens sublime text, or refocuses it if it was already open.
 
-## Open-MitScheme `file`
-	
-	Open-MitScheme <file>
+## Fix-LineEndings
 
-A helper for MIT Scheme that opens the edwin editor. Excluding the file argument opens the editor with a new file.
+    Fix-LineEndings
+
+Converts files in the current and nested directories to CRLF line endings by doing get-content and set-content. 
+File types handled: *.cshtml, *.cs, *.js, *.html, *.csproj, *.sln, *.css
