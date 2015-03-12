@@ -31,7 +31,7 @@ function Get-IniFilename($file) {
 }
 
 function Fix-LineEndings() {
-    foreach ($ext in @("*.cshtml", "*.cs", "*.js", "*.html", "*.csproject", "*.sln", "*.css"))  {
+    foreach ($ext in @("*.cshtml", "*.cs", "*.js", "*.html", "*.csproj", "*.sln", "*.css", "*.sql")  {
         (dir -Recurse -Filter $ext) | foreach { 
             $file = gc $_.FullName
             $file | sc $_.FullName
